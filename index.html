@@ -12,37 +12,29 @@
   --border:   #E4E4E0;
   --ink:      #1A1A1C;
   --muted:    #6B6B74;
-
-  /* couleurs par partie */
-  --a:        #7C5CBF;   /* violet  — Présent/Imparfait  */
+  --a:        #7C5CBF;
   --a-l:      #F3EFFC;
   --a-b:      #D8CCEE;
-
-  --b:        #0F7A5C;   /* teal    — Subordonnées       */
+  --b:        #0F7A5C;
   --b-l:      #EAFAF4;
   --b-b:      #A3DECE;
-
-  --c:        #C04A1F;   /* orange  — COD/Participe      */
+  --c:        #C04A1F;
   --c-l:      #FEF2EB;
   --c-b:      #F5BFA6;
-
-  --d:        #2260A8;   /* bleu    — Adverbes           */
+  --d:        #2260A8;
   --d-l:      #EBF3FD;
   --d-b:      #9DC3ED;
-
   --green:    #155E36;
   --green-l:  #EDFAF3;
   --green-b:  #A3D9BC;
   --red:      #9B1C1C;
   --red-l:    #FEF3F2;
   --red-b:    #FDBBBB;
-
   --r: 10px;
   --serif: 'Source Serif 4', Georgia, serif;
   --sans:  'DM Sans', system-ui, sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-
 body{
   font-family:var(--sans);
   background:var(--bg);
@@ -52,8 +44,6 @@ body{
   line-height:1.65;
 }
 .wrap{max-width:780px;margin:0 auto;}
-
-/* ── HEADER ── */
 .hdr{
   padding-bottom:28px;
   margin-bottom:40px;
@@ -87,8 +77,6 @@ body{
   padding:5px 0;outline:none;transition:border-color .2s;
 }
 .id-f input:focus{border-bottom-color:var(--ink);}
-
-/* ── PROGRESSION ── */
 .prog-wrap{margin-bottom:36px;}
 .prog-label{
   display:flex;justify-content:space-between;
@@ -97,8 +85,6 @@ body{
 }
 .prog-bg{background:var(--border);border-radius:4px;height:4px;}
 .prog-fill{height:100%;background:var(--ink);border-radius:4px;width:0%;transition:width .3s ease;}
-
-/* ── EN-TÊTE DE PARTIE ── */
 .partie{margin-bottom:44px;}
 .partie-head{
   display:flex;align-items:center;gap:14px;
@@ -122,35 +108,26 @@ body{
   white-space:nowrap;padding:4px 11px;
   border-radius:20px;background:rgba(255,255,255,.5);
 }
-
-/* couleurs des parties */
 .pa-a .partie-head{background:var(--a-l);border:1.5px solid var(--a-b);}
 .pa-a .partie-lettre,.pa-a .partie-nom{color:var(--a);}
 .pa-a .partie-sub,.pa-a .partie-pts{color:var(--a);}
 .pa-a .partie-pts{border:1px solid var(--a-b);}
-
 .pa-b .partie-head{background:var(--b-l);border:1.5px solid var(--b-b);}
 .pa-b .partie-lettre,.pa-b .partie-nom{color:var(--b);}
 .pa-b .partie-sub,.pa-b .partie-pts{color:var(--b);}
 .pa-b .partie-pts{border:1px solid var(--b-b);}
-
 .pa-c .partie-head{background:var(--c-l);border:1.5px solid var(--c-b);}
 .pa-c .partie-lettre,.pa-c .partie-nom{color:var(--c);}
 .pa-c .partie-sub,.pa-c .partie-pts{color:var(--c);}
 .pa-c .partie-pts{border:1px solid var(--c-b);}
-
 .pa-d .partie-head{background:var(--d-l);border:1.5px solid var(--d-b);}
 .pa-d .partie-lettre,.pa-d .partie-nom{color:var(--d);}
 .pa-d .partie-sub,.pa-d .partie-pts{color:var(--d);}
 .pa-d .partie-pts{border:1px solid var(--d-b);}
-
-/* numéros de question colorés par partie */
 .pa-a .qn{color:var(--a);font-weight:700;}
 .pa-b .qn{color:var(--b);font-weight:700;}
 .pa-c .qn{color:var(--c);font-weight:700;}
 .pa-d .qn{color:var(--d);font-weight:700;}
-
-/* séparateur entre questions */
 .q-block{
   display:flex;flex-direction:column;gap:11px;
   padding-bottom:22px;
@@ -162,16 +139,12 @@ body{
 .q-text{font-size:.92rem;font-weight:500;line-height:1.6;color:var(--ink);flex:1;}
 .q-text strong{font-weight:700;}
 .q-text em{font-style:italic;}
-
-/* texte d'appui */
 .texte-appui{
   background:var(--surface);border:1.5px solid var(--border);
   border-radius:var(--r);padding:18px 22px;
   font-family:var(--serif);font-size:.95rem;line-height:2;
   font-style:italic;color:var(--ink);
 }
-
-/* phrase référence — couleur par partie */
 .ref{
   padding:10px 16px;
   font-family:var(--serif);font-style:italic;font-size:.93rem;
@@ -181,8 +154,6 @@ body{
 .pa-b .ref{background:var(--b-l);border-left:3px solid var(--b);color:var(--b);}
 .pa-c .ref{background:var(--c-l);border-left:3px solid var(--c);color:var(--c);}
 .pa-d .ref{background:var(--d-l);border-left:3px solid var(--d);color:var(--d);}
-
-/* inputs */
 .inp{
   width:100%;background:var(--surface);
   border:1.5px solid var(--border);
@@ -199,8 +170,6 @@ body{
 textarea.inp{resize:vertical;min-height:70px;line-height:1.6;}
 .dual{display:flex;gap:10px;flex-wrap:wrap;}
 .dual .inp{flex:1;min-width:160px;}
-
-/* choix */
 .ch-group{display:flex;gap:8px;flex-wrap:wrap;}
 .ch{
   cursor:pointer;padding:7px 16px;border-radius:6px;
@@ -214,8 +183,6 @@ textarea.inp{resize:vertical;min-height:70px;line-height:1.6;}
 .pa-d .ch:hover,.pa-d .ch.sel{border-color:var(--d);color:var(--d);background:var(--d-l);}
 .ch.ok{border-color:var(--green)!important;background:var(--green-l)!important;color:var(--green)!important;}
 .ch.ko{border-color:var(--red)!important;background:var(--red-l)!important;color:var(--red)!important;}
-
-/* tableaux */
 .atab{width:100%;border-collapse:collapse;font-size:.88rem;}
 .atab th{
   font-size:.64rem;text-transform:uppercase;letter-spacing:1px;
@@ -230,8 +197,6 @@ textarea.inp{resize:vertical;min-height:70px;line-height:1.6;}
 .atab tr:last-child td{border-bottom:none;}
 .atab td:first-child{font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink);}
 .atab .inp{padding:6px 9px;font-size:.85rem;}
-
-/* correction */
 .corr{display:none;padding:12px 14px;border-radius:8px;margin-top:4px;}
 .corr.c-ok{background:var(--green-l);border:1.5px solid var(--green-b);}
 .corr.c-ko{background:var(--red-l);border:1.5px solid var(--red-b);}
@@ -240,8 +205,6 @@ textarea.inp{resize:vertical;min-height:70px;line-height:1.6;}
 .corr.c-ko .corr-label{color:var(--red);}
 .corr-rep{font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.55;}
 .corr-exp{font-size:.8rem;color:var(--muted);margin-top:5px;line-height:1.6;}
-
-/* ── BOUTON ── */
 .btn{
   display:block;width:100%;padding:15px;margin-top:12px;
   background:var(--ink);color:#fff;
@@ -250,8 +213,6 @@ textarea.inp{resize:vertical;min-height:70px;line-height:1.6;}
   transition:opacity .2s;
 }
 .btn:hover{opacity:.82;}
-
-/* ── RÉSULTATS ── */
 #panel-res{display:none;margin-top:32px;}
 .res-card{
   background:var(--surface);border:1.5px solid var(--border);
@@ -268,8 +229,6 @@ textarea.inp{resize:vertical;min-height:70px;line-height:1.6;}
 .rr-pa{background:#FFFBEB;color:#92400E;border-color:#FDE68A;}
 .rr-no{background:var(--red-l);color:var(--red);border-color:var(--red-b);}
 .rr-pts{margin-left:auto;font-weight:700;white-space:nowrap;}
-
-/* ── CONSIGNE ── */
 .consigne{
   display:flex;align-items:flex-start;gap:10px;
   padding:10px 14px;border-radius:8px;
@@ -290,17 +249,32 @@ textarea.inp{resize:vertical;min-height:70px;line-height:1.6;}
 .pa-d .consigne-tag{background:var(--d);color:#fff;}
 .consigne strong{font-weight:800;}
 .consigne em{font-style:italic;}
-
 footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;}
+.msg{
+  margin-top:16px;
+  padding:12px 14px;
+  border-radius:8px;
+  display:none;
+  font-size:.9rem;
+  font-weight:600;
+}
+.msg.ok{display:block;background:var(--green-l);border:1.5px solid var(--green-b);color:var(--green);}
+.msg.ko{display:block;background:var(--red-l);border:1.5px solid var(--red-b);color:var(--red);}
+.hidden-field{display:none !important;}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<!-- ═══ HEADER ═══ -->
- <form id="eval-form" action="https://formspree.io/f/mreoerwn" method="POST">
-  
- </form>
+<form id="eval-form" action="https://formspree.io/f/mreoerwn" method="POST">
+  <input type="hidden" name="_subject" value="Nouvelle réponse — Évaluation grammaire">
+  <input type="text" name="_gotcha" class="hidden-field" tabindex="-1" autocomplete="off">
+
+  <input type="hidden" name="A1" id="A1">
+  <input type="hidden" name="A4" id="A4">
+  <input type="hidden" name="A5" id="A5">
+  <input type="hidden" name="C4_choice" id="C4_choice">
+
   <div class="hdr">
     <div class="hdr-meta">
       <span>Français · Grammaire · Cycle 4 — 3<sup>e</sup></span>
@@ -311,31 +285,25 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
     <div class="identity">
       <div class="id-f">
         <span class="id-label">Nom</span>
-        <input name="f-nom" type="text" id="f-nom" placeholder="…"/>
+        <input name="f_nom" type="text" id="f-nom" placeholder="…" required/>
       </div>
       <div class="id-f">
         <span class="id-label">Prénom</span>
-        <input type="f-prenom" id="f-prenom" placeholder="…"/>
+        <input name="f_prenom" type="text" id="f-prenom" placeholder="…" required/>
       </div>
       <div class="id-f">
         <span class="id-label">Classe</span>
-        <input name="f-classe" type="text" id="f-classe" placeholder="…"/>
+        <input name="f_classe" type="text" id="f-classe" placeholder="…" required/>
       </div>
     </div>
   </div>
 
-  <!-- BARRE PROGRESSION -->
   <div class="prog-wrap">
     <div class="prog-label"><span>Progression</span><span id="prog-pct">0 %</span></div>
     <div class="prog-bg"><div class="prog-fill" id="prog"></div></div>
   </div>
 
-  <!-- ════════════════════════════════════════════════════
-      PARTIE A — VALEURS DU PRÉSENT ET DE L'IMPARFAIT
-  ════════════════════════════════════════════════════ -->
-
   <div class="partie pa-a">
-
     <div class="partie-head">
       <div class="partie-lettre">A</div>
       <div class="partie-info">
@@ -345,115 +313,99 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
       <div class="partie-pts">/ 11 pts</div>
     </div>
 
+    <div class="texte-appui">
+      (1) Chaque soir, Inès <u>allumait</u> la lampe de son bureau et <u>ouvrait</u> ses cahiers. (2) Ce soir-là, elle <u>réfléchissait</u> à un problème de maths quand son téléphone <u>sonna</u>. (3) « Je <u>suis</u> dans l'escalier, j'arrive ! » dit son frère. (4) En 1969, l'humanité <u>pose</u> le pied sur la Lune pour la première fois. (5) L'eau <u>bout</u> à 100 °C.
+    </div>
 
-
-      <!-- Texte appui A -->
-      <div class="texte-appui">
-        (1) Chaque soir, Inès <u>allumait</u> la lampe de son bureau et <u>ouvrait</u> ses cahiers. (2) Ce soir-là, elle <u>réfléchissait</u> à un problème de maths quand son téléphone <u>sonna</u>. (3) « Je <u>suis</u> dans l'escalier, j'arrive ! » dit son frère. (4) En 1969, l'humanité <u>pose</u> le pied sur la Lune pour la première fois. (5) L'eau <u>bout</u> à 100 °C.
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">1</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Dans la phrase (1), les verbes <em>« allumait »</em> et <em>« ouvrait »</em> sont à l'imparfait. Quelle est leur valeur ?</span></div>
       </div>
-
-      <!-- Q A1 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">1</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Dans la phrase (1), les verbes <em>« allumait »</em> et <em>« ouvrait »</em> sont à l'imparfait. Quelle est leur valeur ?</span></div>
-        </div>
-        <div class="ch-group" id="cA1">
-          <div class="ch" onclick="pick(this,'cA1')">Imparfait descriptif</div>
-          <div class="ch" onclick="pick(this,'cA1')">Imparfait d'habitude</div>
-          <div class="ch" onclick="pick(this,'cA1')">Imparfait de simultanéité</div>
-        </div>
-        <div class="corr" id="kA1"></div>
+      <div class="ch-group" id="cA1" data-target="A1">
+        <div class="ch" onclick="pick(this,'cA1')">Imparfait descriptif</div>
+        <div class="ch" onclick="pick(this,'cA1')">Imparfait d'habitude</div>
+        <div class="ch" onclick="pick(this,'cA1')">Imparfait de simultanéité</div>
       </div>
+      <div class="corr" id="kA1"></div>
+    </div>
 
-      <!-- Q A2 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">2</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Dans la phrase (2), identifie le temps et la valeur de <em>« réfléchissait »</em>, puis explique son rapport avec <em>« sonna »</em>.</span></div>
-        </div>
-        <textarea class="inp" id="A2" placeholder="Temps, valeur, relation avec le passé simple…" oninput="prog()"></textarea>
-        <div class="corr" id="kA2"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">2</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Dans la phrase (2), identifie le temps et la valeur de <em>« réfléchissait »</em>, puis explique son rapport avec <em>« sonna »</em>.</span></div>
       </div>
+      <textarea name="A2" class="inp" id="A2" placeholder="Temps, valeur, relation avec le passé simple…" oninput="prog()"></textarea>
+      <div class="corr" id="kA2"></div>
+    </div>
 
-      <!-- Q A3 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">3</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Dans la phrase (3), quel est le <strong>temps</strong> du verbe <em>« suis »</em> et quelle est sa <strong>valeur</strong> précise ?</span></div>
-        </div>
-        <div class="dual">
-          <input name="tense" class="inp" type="text" id="A3t" placeholder="Temps : …" oninput="prog()"/>
-          <input name="verbValue" class="inp" type="text" id="A3v" placeholder="Valeur : …" oninput="prog()"/>
-        </div>
-        <div class="corr" id="kA3"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">3</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Dans la phrase (3), quel est le <strong>temps</strong> du verbe <em>« suis »</em> et quelle est sa <strong>valeur</strong> précise ?</span></div>
       </div>
-
-      <!-- Q A4 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">4</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>La phrase (4) contient un présent alors qu'elle parle d'un événement passé (1969). Comment appelle-t-on cette valeur particulière du présent ?</span></div>
-        </div>
-        <div class="ch-group" id="cA4">
-          <div class="ch" onclick="pick(this,'cA4')">Présent d'énonciation</div>
-          <div class="ch" onclick="pick(this,'cA4')">Présent de vérité générale</div>
-          <div class="ch" onclick="pick(this,'cA4')">Présent de narration</div>
-          <div class="ch" onclick="pick(this,'cA4')">Présent d'habitude</div>
-        </div>
-        <div class="corr" id="kA4"></div>
+      <div class="dual">
+        <input name="A3_tense" class="inp" type="text" id="A3t" placeholder="Temps : …" oninput="prog()"/>
+        <input name="A3_value" class="inp" type="text" id="A3v" placeholder="Valeur : …" oninput="prog()"/>
       </div>
+      <div class="corr" id="kA3"></div>
+    </div>
 
-      <!-- Q A5 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">5</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>La phrase (5) — <em>« L'eau bout à 100 °C. »</em> — illustre quelle valeur du présent ?</span></div>
-        </div>
-        <div class="ch-group" id="cA5">
-          <div class="ch" onclick="pick(this,'cA5')">Présent d'énonciation</div>
-          <div class="ch" onclick="pick(this,'cA5')">Présent de vérité générale</div>
-          <div class="ch" onclick="pick(this,'cA5')">Présent d'habitude</div>
-          <div class="ch" onclick="pick(this,'cA5')">Présent de narration</div>
-        </div>
-        <div class="corr" id="kA5"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">4</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>La phrase (4) contient un présent alors qu'elle parle d'un événement passé (1969). Comment appelle-t-on cette valeur particulière du présent ?</span></div>
       </div>
-
-      <!-- Q A6 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">6</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Écris toi-même <strong>une phrase</strong> contenant un imparfait descriptif. Souligne le verbe et indique sa valeur entre parenthèses.</span></div>
-        </div>
-        <textarea class="inp" id="A6" placeholder="Ta phrase ici…" oninput="prog()"></textarea>
-        <div class="corr" id="kA6"></div>
+      <div class="ch-group" id="cA4" data-target="A4">
+        <div class="ch" onclick="pick(this,'cA4')">Présent d'énonciation</div>
+        <div class="ch" onclick="pick(this,'cA4')">Présent de vérité générale</div>
+        <div class="ch" onclick="pick(this,'cA4')">Présent de narration</div>
+        <div class="ch" onclick="pick(this,'cA4')">Présent d'habitude</div>
       </div>
+      <div class="corr" id="kA4"></div>
+    </div>
 
-      <!-- Q A7 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">7</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Complète le tableau : associe chaque phrase à la <strong>valeur du temps</strong> employée.</span></div>
-        </div>
-        <table class="atab">
-          <thead><tr><th>Phrase</th><th>Valeur du temps</th></tr></thead>
-          <tbody>
-            <tr><td>« Chaque année, il partait en vacances. »</td><td><input name="A7a" class="inp" type="text" id="A7a" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>« Il lisait quand la lumière s'éteignit. »</td><td><input name="A7b" class="inp" type="text" id="A7b" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>« En 1815, Napoléon perd à Waterloo. »</td><td><input name="A7c" class="inp" type="text" id="A7c" placeholder="…" oninput="prog()"/></td></tr>
-          </tbody>
-        </table>
-        <div class="corr" id="kA7"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">5</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>La phrase (5) — <em>« L'eau bout à 100 °C. »</em> — illustre quelle valeur du présent ?</span></div>
       </div>
+      <div class="ch-group" id="cA5" data-target="A5">
+        <div class="ch" onclick="pick(this,'cA5')">Présent d'énonciation</div>
+        <div class="ch" onclick="pick(this,'cA5')">Présent de vérité générale</div>
+        <div class="ch" onclick="pick(this,'cA5')">Présent d'habitude</div>
+        <div class="ch" onclick="pick(this,'cA5')">Présent de narration</div>
+      </div>
+      <div class="corr" id="kA5"></div>
+    </div>
 
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">6</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Écris toi-même <strong>une phrase</strong> contenant un imparfait descriptif. Souligne le verbe et indique sa valeur entre parenthèses.</span></div>
+      </div>
+      <textarea name="A6" class="inp" id="A6" placeholder="Ta phrase ici…" oninput="prog()"></textarea>
+      <div class="corr" id="kA6"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">7</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Complète le tableau : associe chaque phrase à la <strong>valeur du temps</strong> employée.</span></div>
+      </div>
+      <table class="atab">
+        <thead><tr><th>Phrase</th><th>Valeur du temps</th></tr></thead>
+        <tbody>
+          <tr><td>« Chaque année, il partait en vacances. »</td><td><input name="A7a" class="inp" type="text" id="A7a" placeholder="…" oninput="prog()"/></td></tr>
+          <tr><td>« Il lisait quand la lumière s'éteignit. »</td><td><input name="A7b" class="inp" type="text" id="A7b" placeholder="…" oninput="prog()"/></td></tr>
+          <tr><td>« En 1815, Napoléon perd à Waterloo. »</td><td><input name="A7c" class="inp" type="text" id="A7c" placeholder="…" oninput="prog()"/></td></tr>
+        </tbody>
+      </table>
+      <div class="corr" id="kA7"></div>
+    </div>
   </div>
 
-  <!-- ════════════════════════════════════════════════════
-      PARTIE B — PROPOSITIONS SUBORDONNÉES
-  ════════════════════════════════════════════════════ -->
-
   <div class="partie pa-b">
-
     <div class="partie-head">
       <div class="partie-lettre">B</div>
       <div class="partie-info">
@@ -463,95 +415,83 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
       <div class="partie-pts">/ 10 pts</div>
     </div>
 
-
-
-      <!-- Q B1 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">1</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Combien de verbes conjugués contient cette phrase ? Est-elle <strong>simple</strong> ou <strong>complexe</strong> ?</span></div>
-        </div>
-        <div class="ref">Le garçon que j'ai croisé ce matin portait un sac rouge.</div>
-        <div class="dual">
-          <input name="B1n" class="inp" type="text" id="B1n" placeholder="Nombre de verbes : …" oninput="prog()"/>
-          <input name="B1t" class="inp" type="text" id="B1t" placeholder="Simple ou complexe ? …" oninput="prog()"/>
-        </div>
-        <div class="corr" id="kB1"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">1</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Combien de verbes conjugués contient cette phrase ? Est-elle <strong>simple</strong> ou <strong>complexe</strong> ?</span></div>
       </div>
-
-      <!-- Q B2 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">2</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Dans les phrases suivantes, recopie uniquement la proposition subordonnée et indique son <strong>type</strong>.</span></div>
-        </div>
-        <div class="ref">a) Le livre dont tu m'as parlé est épuisé.</div>
-        <div class="dual" style="margin-bottom:8px;">
-          <input name="B2a-ps" class="inp" type="text" id="B2a-ps" placeholder="Subordonnée : …" oninput="prog()"/>
-          <input name="B2a-t" class="inp" type="text" id="B2a-t" placeholder="Type : …" oninput="prog()"/>
-        </div>
-        <div class="corr" id="kB2a"></div>
-        <div class="ref" style="margin-top:10px;">b) Je crois que tu as oublié ton stylo.</div>
-        <div class="dual">
-          <input name="B2b-ps" class="inp" type="text" id="B2b-ps" placeholder="Subordonnée : …" oninput="prog()"/>
-          <input name="B2b-t" class="inp" type="text" id="B2b-t" placeholder="Type : …" oninput="prog()"/>
-        </div>
-        <div class="corr" id="kB2b"></div>
+      <div class="ref">Le garçon que j'ai croisé ce matin portait un sac rouge.</div>
+      <div class="dual">
+        <input name="B1n" class="inp" type="text" id="B1n" placeholder="Nombre de verbes : …" oninput="prog()"/>
+        <input name="B1t" class="inp" type="text" id="B1t" placeholder="Simple ou complexe ? …" oninput="prog()"/>
       </div>
+      <div class="corr" id="kB1"></div>
+    </div>
 
-      <!-- Q B3 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">3</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Identifie le <strong>type</strong> de chaque proposition subordonnée circonstancielle et précise sa <strong>valeur</strong> (temps / cause / but / condition).</span></div>
-        </div>
-        <table class="atab">
-          <thead><tr><th>Phrase</th><th>Type</th><th>Valeur</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>« Il a révisé parce qu'il avait un examen. »</td>
-              <td><input name="B3a-t" class="inp" type="text" id="B3a-t" placeholder="…" oninput="prog()"/></td>
-              <td><input name="B3a-v" class="inp" type="text" id="B3a-v" placeholder="…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>« Elle parle doucement pour que tu entendes. »</td>
-              <td><input name="B3b-t" class="inp" type="text" id="B3b-t" placeholder="…" oninput="prog()"/></td>
-              <td><input name="B3b-v" class="inp" type="text" id="B3b-v" placeholder="…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>« Si tu travailles, tu réussiras. »</td>
-              <td><input name="B3c-t" class="inp" type="text" id="B3c-t" placeholder="…" oninput="prog()"/></td>
-              <td><input name="B3c-v" class="inp" type="text" id="B3c-v" placeholder="…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>« Il sourit lorsqu'elle entra dans la salle. »</td>
-              <td><input name="B3d-t" class="inp" type="text" id="B3d-t" placeholder="…" oninput="prog()"/></td>
-              <td><input name="B3d-v" class="inp" type="text" id="B3d-v" placeholder="…" oninput="prog()"/></td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="corr" id="kB3"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">2</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Dans les phrases suivantes, recopie uniquement la proposition subordonnée et indique son <strong>type</strong>.</span></div>
       </div>
-
-      <!-- Q B4 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">4</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Remplace la proposition subordonnée complétive par le mot <em>« cela »</em> et vérifie si la phrase reste correcte. Que prouve ce test ?</span></div>
-        </div>
-        <div class="ref">Il espère que son équipe gagnera.</div>
-        <textarea class="inp" id="B4" placeholder="Écris la phrase avec « cela » puis explique…" oninput="prog()"></textarea>
-        <div class="corr" id="kB4"></div>
+      <div class="ref">a) Le livre dont tu m'as parlé est épuisé.</div>
+      <div class="dual" style="margin-bottom:8px;">
+        <input name="B2a_ps" class="inp" type="text" id="B2a-ps" placeholder="Subordonnée : …" oninput="prog()"/>
+        <input name="B2a_t" class="inp" type="text" id="B2a-t" placeholder="Type : …" oninput="prog()"/>
       </div>
+      <div class="corr" id="kB2a"></div>
+      <div class="ref" style="margin-top:10px;">b) Je crois que tu as oublié ton stylo.</div>
+      <div class="dual">
+        <input name="B2b_ps" class="inp" type="text" id="B2b-ps" placeholder="Subordonnée : …" oninput="prog()"/>
+        <input name="B2b_t" class="inp" type="text" id="B2b-t" placeholder="Type : …" oninput="prog()"/>
+      </div>
+      <div class="corr" id="kB2b"></div>
+    </div>
 
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">3</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Identifie le <strong>type</strong> de chaque proposition subordonnée circonstancielle et précise sa <strong>valeur</strong> (temps / cause / but / condition).</span></div>
+      </div>
+      <table class="atab">
+        <thead><tr><th>Phrase</th><th>Type</th><th>Valeur</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>« Il a révisé parce qu'il avait un examen. »</td>
+            <td><input name="B3a_t" class="inp" type="text" id="B3a-t" placeholder="…" oninput="prog()"/></td>
+            <td><input name="B3a_v" class="inp" type="text" id="B3a-v" placeholder="…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>« Elle parle doucement pour que tu entendes. »</td>
+            <td><input name="B3b_t" class="inp" type="text" id="B3b-t" placeholder="…" oninput="prog()"/></td>
+            <td><input name="B3b_v" class="inp" type="text" id="B3b-v" placeholder="…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>« Si tu travailles, tu réussiras. »</td>
+            <td><input name="B3c_t" class="inp" type="text" id="B3c-t" placeholder="…" oninput="prog()"/></td>
+            <td><input name="B3c_v" class="inp" type="text" id="B3c-v" placeholder="…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>« Il sourit lorsqu'elle entra dans la salle. »</td>
+            <td><input name="B3d_t" class="inp" type="text" id="B3d-t" placeholder="…" oninput="prog()"/></td>
+            <td><input name="B3d_v" class="inp" type="text" id="B3d-v" placeholder="…" oninput="prog()"/></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="corr" id="kB3"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">4</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Remplace la proposition subordonnée complétive par le mot <em>« cela »</em> et vérifie si la phrase reste correcte. Que prouve ce test ?</span></div>
+      </div>
+      <div class="ref">Il espère que son équipe gagnera.</div>
+      <textarea name="B4" class="inp" id="B4" placeholder="Écris la phrase avec « cela » puis explique…" oninput="prog()"></textarea>
+      <div class="corr" id="kB4"></div>
+    </div>
   </div>
 
-  <!-- ════════════════════════════════════════════════════
-      PARTIE C — COD ET ACCORD DU PARTICIPE PASSÉ
-  ════════════════════════════════════════════════════ -->
-
   <div class="partie pa-c">
-
     <div class="partie-head">
       <div class="partie-lettre">C</div>
       <div class="partie-info">
@@ -561,109 +501,97 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
       <div class="partie-pts">/ 11 pts</div>
     </div>
 
-
-
-      <!-- Q C1 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">1</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Pour chaque phrase, indique si le groupe souligné est <strong>COD</strong> ou <strong>non COD</strong> (COI ou autre). Justifie avec la question.</span></div>
-        </div>
-        <table class="atab">
-          <thead><tr><th>Phrase</th><th>COD ou non ?</th><th>Question posée</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>« Elle écoute <u>de la musique</u>. »</td>
-              <td><input name="C1a-c" class="inp" type="text" id="C1a-c" placeholder="…" oninput="prog()"/></td>
-              <td><input name="C1a-q" class="inp" type="text" id="C1a-q" placeholder="…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>« Il parle <u>à son professeur</u>. »</td>
-              <td><input name="C1b-c" class="inp" type="text" id="C1b-c" placeholder="…" oninput="prog()"/></td>
-              <td><input name="C1b-q" class="inp" type="text" id="C1b-q" placeholder="…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>« Nous regardons <u>ce film</u>. »</td>
-              <td><input name="C1c-c" class="inp" type="text" id="C1c-c" placeholder="…" oninput="prog()"/></td>
-              <td><input name="C1c-q" class="inp" type="text" id="C1c-q" placeholder="…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>« Elle se souvient <u>de cette journée</u>. »</td>
-              <td><input name="C1d-c" class="inp" type="text" id="C1d-c" placeholder="…" oninput="prog()"/></td>
-              <td><input name="C1d-q" class="inp" type="text" id="C1d-q" placeholder="…" oninput="prog()"/></td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="corr" id="kC1"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">1</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Pour chaque phrase, indique si le groupe souligné est <strong>COD</strong> ou <strong>non COD</strong> (COI ou autre). Justifie avec la question.</span></div>
       </div>
+      <table class="atab">
+        <thead><tr><th>Phrase</th><th>COD ou non ?</th><th>Question posée</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>« Elle écoute <u>de la musique</u>. »</td>
+            <td><input name="C1a_c" class="inp" type="text" id="C1a-c" placeholder="…" oninput="prog()"/></td>
+            <td><input name="C1a_q" class="inp" type="text" id="C1a-q" placeholder="…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>« Il parle <u>à son professeur</u>. »</td>
+            <td><input name="C1b_c" class="inp" type="text" id="C1b-c" placeholder="…" oninput="prog()"/></td>
+            <td><input name="C1b_q" class="inp" type="text" id="C1b-q" placeholder="…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>« Nous regardons <u>ce film</u>. »</td>
+            <td><input name="C1c_c" class="inp" type="text" id="C1c-c" placeholder="…" oninput="prog()"/></td>
+            <td><input name="C1c_q" class="inp" type="text" id="C1c-q" placeholder="…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>« Elle se souvient <u>de cette journée</u>. »</td>
+            <td><input name="C1d_c" class="inp" type="text" id="C1d-c" placeholder="…" oninput="prog()"/></td>
+            <td><input name="C1d_q" class="inp" type="text" id="C1d-q" placeholder="…" oninput="prog()"/></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="corr" id="kC1"></div>
+    </div>
 
-      <!-- Q C2 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">2</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Accorde correctement le participe passé entre parenthèses. Précise l'auxiliaire utilisé.</span></div>
-        </div>
-        <table class="atab">
-          <thead><tr><th>Phrase</th><th>Participe accordé</th><th>Auxiliaire</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>« Les filles sont (partir). »</td>
-              <td><input name="C2a-p" class="inp" type="text" id="C2a-p" placeholder="…" oninput="prog()"/></td>
-              <td><input name="C2a-a" class="inp" type="text" id="C2a-a" placeholder="…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>« La lettre qu'il a (écrire). »</td>
-              <td><input name="C2b-p" class="inp" type="text" id="C2b-p" placeholder="…" oninput="prog()"/></td>
-              <td><input name="C2b-a" class="inp" type="text" id="C2b-a" placeholder="…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>« Il a (manger) une pomme. »</td>
-              <td><input name="C2c-p" class="inp" type="text" id="C2c-p" placeholder="…" oninput="prog()"/></td>
-              <td><input name="C2c-a" class="inp" type="text" id="C2c-a" placeholder="…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>« Les romans que j'ai (lire). »</td>
-              <td><input name="C2d-p" class="inp" type="text" id="C2d-p" placeholder="…" oninput="prog()"/></td>
-              <td><input name="C2d-a" class="inp" type="text" id="C2d-a" placeholder="…" oninput="prog()"/></td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="corr" id="kC2"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">2</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Accorde correctement le participe passé entre parenthèses. Précise l'auxiliaire utilisé.</span></div>
       </div>
+      <table class="atab">
+        <thead><tr><th>Phrase</th><th>Participe accordé</th><th>Auxiliaire</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>« Les filles sont (partir). »</td>
+            <td><input name="C2a_p" class="inp" type="text" id="C2a-p" placeholder="…" oninput="prog()"/></td>
+            <td><input name="C2a_a" class="inp" type="text" id="C2a-a" placeholder="…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>« La lettre qu'il a (écrire). »</td>
+            <td><input name="C2b_p" class="inp" type="text" id="C2b-p" placeholder="…" oninput="prog()"/></td>
+            <td><input name="C2b_a" class="inp" type="text" id="C2b-a" placeholder="…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>« Il a (manger) une pomme. »</td>
+            <td><input name="C2c_p" class="inp" type="text" id="C2c-p" placeholder="…" oninput="prog()"/></td>
+            <td><input name="C2c_a" class="inp" type="text" id="C2c-a" placeholder="…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>« Les romans que j'ai (lire). »</td>
+            <td><input name="C2d_p" class="inp" type="text" id="C2d-p" placeholder="…" oninput="prog()"/></td>
+            <td><input name="C2d_a" class="inp" type="text" id="C2d-a" placeholder="…" oninput="prog()"/></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="corr" id="kC2"></div>
+    </div>
 
-      <!-- Q C3 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">3</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Explique en tes propres mots la <strong>démarche en 3 étapes</strong> pour accorder le participe passé avec l'auxiliaire <em>avoir</em>.</span></div>
-        </div>
-        <textarea class="inp" id="C3" placeholder="Étape 1 : … Étape 2 : … Étape 3 : …" oninput="prog()"></textarea>
-        <div class="corr" id="kC3"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">3</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Explique en tes propres mots la <strong>démarche en 3 étapes</strong> pour accorder le participe passé avec l'auxiliaire <em>avoir</em>.</span></div>
       </div>
+      <textarea name="C3" class="inp" id="C3" placeholder="Étape 1 : … Étape 2 : … Étape 3 : …" oninput="prog()"></textarea>
+      <div class="corr" id="kC3"></div>
+    </div>
 
-      <!-- Q C4 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">4</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Parmi ces phrases, laquelle contient une <strong>erreur d'accord</strong> du participe passé ? Corrige-la.</span></div>
-        </div>
-        <div class="ch-group" id="cC4">
-          <div class="ch" onclick="pick(this,'cC4')">a) Elle est arrivée en retard.</div>
-          <div class="ch" onclick="pick(this,'cC4')">b) Les clés qu'il a perdu sont introuvables.</div>
-          <div class="ch" onclick="pick(this,'cC4')">c) Nous avons mangé une pizza.</div>
-        </div>
-        <input name="C4-corr" class="inp" type="text" id="C4-corr" placeholder="Correction de la phrase erronée…" oninput="prog()" style="margin-top:8px;"/>
-        <div class="corr" id="kC4"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">4</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Parmi ces phrases, laquelle contient une <strong>erreur d'accord</strong> du participe passé ? Corrige-la.</span></div>
       </div>
-
+      <div class="ch-group" id="cC4" data-target="C4_choice">
+        <div class="ch" onclick="pick(this,'cC4')">a) Elle est arrivée en retard.</div>
+        <div class="ch" onclick="pick(this,'cC4')">b) Les clés qu'il a perdu sont introuvables.</div>
+        <div class="ch" onclick="pick(this,'cC4')">c) Nous avons mangé une pizza.</div>
+      </div>
+      <input name="C4_corr" class="inp" type="text" id="C4-corr" placeholder="Correction de la phrase erronée…" oninput="prog()" style="margin-top:8px;"/>
+      <div class="corr" id="kC4"></div>
+    </div>
   </div>
 
-  <!-- ════════════════════════════════════════════════════
-      PARTIE D — LES ADVERBES
-  ════════════════════════════════════════════════════ -->
-
   <div class="partie pa-d">
-
     <div class="partie-head">
       <div class="partie-lettre">D</div>
       <div class="partie-info">
@@ -673,87 +601,80 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
       <div class="partie-pts">/ 8 pts</div>
     </div>
 
-
-
-      <!-- Q D1 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">1</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Classe chaque adverbe en gras dans le tableau selon son <strong>type</strong>.</span></div>
-        </div>
-        <div class="ref">
-          a) Il travaille <strong>toujours</strong> le soir. &nbsp;·&nbsp;
-          b) Elle est <strong>très</strong> patiente. &nbsp;·&nbsp;
-          c) Viens <strong>ici</strong> ! &nbsp;·&nbsp;
-          d) Il répondit <strong>calmement</strong>. &nbsp;·&nbsp;
-          e) <strong>Peut-être</strong> viendra-t-elle. &nbsp;·&nbsp;
-          f) Il ne mange <strong>jamais</strong> de viande.
-        </div>
-        <table class="atab">
-          <thead><tr><th>Adverbe</th><th>Type</th><th>Ce qu'il modifie</th></tr></thead>
-          <tbody>
-            <tr><td>toujours</td><td><input name="D1a-t" class="inp" type="text" id="D1a-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1a-m" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>très</td>    <td><input name="D1b-t" class="inp" type="text" id="D1b-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1b-m" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>ici</td>     <td><input name="D1c-t" class="inp" type="text" id="D1c-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1c-m" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>calmement</td><td><input name="D1d-t" class="inp" type="text" id="D1d-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1d-m" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>peut-être</td><td><input name="D1e-t" class="inp" type="text" id="D1e-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1e-m" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>jamais</td>  <td><input name="D1f-t" class="inp" type="text" id="D1f-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1f-m" placeholder="…" oninput="prog()"/></td></tr>
-          </tbody>
-        </table>
-        <div class="corr" id="kD1"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">1</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Classe chaque adverbe en gras dans le tableau selon son <strong>type</strong>.</span></div>
       </div>
-
-      <!-- Q D2 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">2</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Forme l'adverbe de manière à partir de chaque adjectif. Rappelle la règle de formation.</span></div>
-        </div>
-        <table class="atab">
-          <thead><tr><th>Adjectif masculin</th><th>Adjectif féminin</th><th>Adverbe formé</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>doux</td>
-              <td><input name="D2a-f" class="inp" type="text" id="D2a-f" placeholder="féminin…" oninput="prog()"/></td>
-              <td><input name="D2a-adv" class="inp" type="text" id="D2a-adv" placeholder="adverbe…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>lent</td>
-              <td><input name="D2b-f" class="inp" type="text" id="D2b-f" placeholder="féminin…" oninput="prog()"/></td>
-              <td><input name="D2b-adv" class="inp" type="text" id="D2b-adv" placeholder="adverbe…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>heureux</td>
-              <td><input name="D2c-f" class="inp" type="text" id="D2c-f" placeholder="féminin…" oninput="prog()"/></td>
-              <td><input name="D2c-adv" class="inp" type="text" id="D2c-adv" placeholder="adverbe…" oninput="prog()"/></td>
-            </tr>
-            <tr>
-              <td>vif</td>
-              <td><input name="D2d-f" class="inp" type="text" id="D2d-f" placeholder="féminin…" oninput="prog()"/></td>
-              <td><input name="D2d-adv" class="inp" type="text" id="D2d-adv" placeholder="adverbe…" oninput="prog()"/></td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="corr" id="kD2"></div>
+      <div class="ref">
+        a) Il travaille <strong>toujours</strong> le soir. &nbsp;·&nbsp;
+        b) Elle est <strong>très</strong> patiente. &nbsp;·&nbsp;
+        c) Viens <strong>ici</strong> ! &nbsp;·&nbsp;
+        d) Il répondit <strong>calmement</strong>. &nbsp;·&nbsp;
+        e) <strong>Peut-être</strong> viendra-t-elle. &nbsp;·&nbsp;
+        f) Il ne mange <strong>jamais</strong> de viande.
       </div>
+      <table class="atab">
+        <thead><tr><th>Adverbe</th><th>Type</th><th>Ce qu'il modifie</th></tr></thead>
+        <tbody>
+          <tr><td>toujours</td><td><input name="D1a_t" class="inp" type="text" id="D1a-t" placeholder="…" oninput="prog()"/></td><td><input name="D1a_m" class="inp" type="text" id="D1a-m" placeholder="…" oninput="prog()"/></td></tr>
+          <tr><td>très</td>    <td><input name="D1b_t" class="inp" type="text" id="D1b-t" placeholder="…" oninput="prog()"/></td><td><input name="D1b_m" class="inp" type="text" id="D1b-m" placeholder="…" oninput="prog()"/></td></tr>
+          <tr><td>ici</td>     <td><input name="D1c_t" class="inp" type="text" id="D1c-t" placeholder="…" oninput="prog()"/></td><td><input name="D1c_m" class="inp" type="text" id="D1c-m" placeholder="…" oninput="prog()"/></td></tr>
+          <tr><td>calmement</td><td><input name="D1d_t" class="inp" type="text" id="D1d-t" placeholder="…" oninput="prog()"/></td><td><input name="D1d_m" class="inp" type="text" id="D1d-m" placeholder="…" oninput="prog()"/></td></tr>
+          <tr><td>peut-être</td><td><input name="D1e_t" class="inp" type="text" id="D1e-t" placeholder="…" oninput="prog()"/></td><td><input name="D1e_m" class="inp" type="text" id="D1e-m" placeholder="…" oninput="prog()"/></td></tr>
+          <tr><td>jamais</td>  <td><input name="D1f_t" class="inp" type="text" id="D1f-t" placeholder="…" oninput="prog()"/></td><td><input name="D1f_m" class="inp" type="text" id="D1f-m" placeholder="…" oninput="prog()"/></td></tr>
+        </tbody>
+      </table>
+      <div class="corr" id="kD1"></div>
+    </div>
 
-      <!-- Q D3 -->
-      <div class="q-block">
-        <div class="q-line">
-          <div class="qn">3</div>
-          <div class="consigne"><span class="consigne-tag">Consigne</span><span>Dans cette phrase, <em>« lentements »</em> est incorrect. Pourquoi ? Corrige.</span></div>
-        </div>
-        <div class="ref">★ Elles parlent <u>lentements</u> pour être bien comprises.</div>
-        <textarea class="inp" id="D3" placeholder="Explication et phrase corrigée…" oninput="prog()"></textarea>
-        <div class="corr" id="kD3"></div>
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">2</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Forme l'adverbe de manière à partir de chaque adjectif. Rappelle la règle de formation.</span></div>
       </div>
+      <table class="atab">
+        <thead><tr><th>Adjectif masculin</th><th>Adjectif féminin</th><th>Adverbe formé</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>doux</td>
+            <td><input name="D2a_f" class="inp" type="text" id="D2a-f" placeholder="féminin…" oninput="prog()"/></td>
+            <td><input name="D2a_adv" class="inp" type="text" id="D2a-adv" placeholder="adverbe…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>lent</td>
+            <td><input name="D2b_f" class="inp" type="text" id="D2b-f" placeholder="féminin…" oninput="prog()"/></td>
+            <td><input name="D2b_adv" class="inp" type="text" id="D2b-adv" placeholder="adverbe…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>heureux</td>
+            <td><input name="D2c_f" class="inp" type="text" id="D2c-f" placeholder="féminin…" oninput="prog()"/></td>
+            <td><input name="D2c_adv" class="inp" type="text" id="D2c-adv" placeholder="adverbe…" oninput="prog()"/></td>
+          </tr>
+          <tr>
+            <td>vif</td>
+            <td><input name="D2d_f" class="inp" type="text" id="D2d-f" placeholder="féminin…" oninput="prog()"/></td>
+            <td><input name="D2d_adv" class="inp" type="text" id="D2d-adv" placeholder="adverbe…" oninput="prog()"/></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="corr" id="kD2"></div>
+    </div>
 
+    <div class="q-block">
+      <div class="q-line">
+        <div class="qn">3</div>
+        <div class="consigne"><span class="consigne-tag">Consigne</span><span>Dans cette phrase, <em>« lentements »</em> est incorrect. Pourquoi ? Corrige.</span></div>
+      </div>
+      <div class="ref">★ Elles parlent <u>lentements</u> pour être bien comprises.</div>
+      <textarea name="D3" class="inp" id="D3" placeholder="Explication et phrase corrigée…" oninput="prog()"></textarea>
+      <div class="corr" id="kD3"></div>
+    </div>
   </div>
 
-  <!-- BOUTON -->
-  <button class="btn" onclick="valider()">Valider et afficher la correction</button>
+  <button type="submit" class="btn">Valider, afficher la correction et envoyer</button>
+  <div id="submit-msg" class="msg"></div>
 
-  <!-- RÉSULTATS -->
   <div id="panel-res">
     <div class="res-card">
       <div class="res-score" id="res-score">— / 40</div>
@@ -763,13 +684,20 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
   </div>
 </form>
 </div>
+
 <footer>Pôle Inclusion · LFJM · Évaluation Grammaire Cycle 4 · 26 / 03 / 2026</footer>
 
 <script>
-/* ─── QCM ─── */
 function pick(el,g){
   document.querySelectorAll('#'+g+' .ch').forEach(c=>c.classList.remove('sel'));
-  el.classList.add('sel');prog();
+  el.classList.add('sel');
+  const group = document.getElementById(g);
+  const targetId = group ? group.dataset.target : null;
+  if (targetId) {
+    const hidden = document.getElementById(targetId);
+    if (hidden) hidden.value = el.textContent.trim();
+  }
+  prog();
 }
 function gch(g){const s=document.querySelector('#'+g+' .ch.sel');return s?s.textContent.trim():'';}
 function mch(g,ok,correct){
@@ -779,14 +707,10 @@ function mch(g,ok,correct){
     else if(c.classList.contains('sel'))c.classList.add('ko');
   });
 }
-
-/* ─── NORMALISATION ─── */
 function n(s){return(s||'').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ']/g,' ').replace(/\s+/g,' ').trim();}
 function has(s,...kw){const nn=n(s);return kw.some(k=>nn.includes(n(k)));}
 function eq(s,...v){const nn=n(s);return v.some(k=>nn===n(k));}
 function mi(id,ok){const el=document.getElementById(id);if(!el)return;el.classList.remove('ok','ko');el.classList.add(ok?'ok':'ko');}
-
-/* ─── CORRECTION ─── */
 function corr(id,ok,rep,exp){
   const el=document.getElementById(id);
   if(!el)return;
@@ -795,8 +719,6 @@ function corr(id,ok,rep,exp){
   el.innerHTML=`<div class="corr-label">${ok?'✔ Bonne réponse':'✘ Réponse attendue'}</div>
     <div class="corr-rep">${rep}</div>${exp?`<div class="corr-exp">${exp}</div>`:''}`;
 }
-
-/* ─── PROGRESSION ─── */
 function prog(){
   const inps=[...document.querySelectorAll('.inp')].filter(i=>!i.closest('#panel-res'));
   const chs=[...document.querySelectorAll('.ch-group')];
@@ -806,110 +728,74 @@ function prog(){
   document.getElementById('prog').style.width=pct+'%';
   document.getElementById('prog-pct').textContent=pct+' %';
 }
-
-/* ═══════════════════ VALIDATION ═══════════════════ */
 function valider(){
   let pts=0;
   const det=[];
 
-  /* ══ PARTIE A ══ */
   let a=0;
-
-  // A1
   const okA1=eq(gch('cA1'),"Imparfait d'habitude");
   mch('cA1',okA1,"Imparfait d'habitude");
   if(okA1)a++;
-  corr('kA1',okA1,
-    "Réponse : <strong>Imparfait d'habitude</strong>",
-    "« Chaque soir » indique une action répétée régulièrement dans le passé. C'est la marque de l'imparfait d'habitude.");
+  corr('kA1',okA1,"Réponse : <strong>Imparfait d'habitude</strong>","« Chaque soir » indique une action répétée régulièrement dans le passé. C'est la marque de l'imparfait d'habitude.");
 
-  // A2
   const vA2=document.getElementById('A2').value;
   const okA2=has(vA2,'imparfait') && (has(vA2,'simultaneite','simultaneité','simultane','interrompu','interrompue') || has(vA2,'passe simple','passé simple'));
   mi('A2',okA2);if(okA2)a+=2;
-  corr('kA2',okA2,
-    "Temps : <strong>imparfait</strong>. Valeur : <strong>imparfait de simultanéité</strong>.",
-    "« Réfléchissait » exprime une action longue de fond qui est interrompue par « sonna » (passé simple = action courte et soudaine). Les deux actions se produisent en même temps, mais l'une coupe l'autre.");
+  corr('kA2',okA2,"Temps : <strong>imparfait</strong>. Valeur : <strong>imparfait de simultanéité</strong>.","« Réfléchissait » exprime une action longue de fond qui est interrompue par « sonna ».");
 
-  // A3
   const okA3t=has(document.getElementById('A3t').value,'présent','present');
   const okA3v=has(document.getElementById('A3v').value,'enonciation','énonciation');
   mi('A3t',okA3t);mi('A3v',okA3v);
   if(okA3t)a++;if(okA3v)a++;
-  corr('kA3',okA3t&&okA3v,
-    "Temps : <strong>présent de l'indicatif</strong>. Valeur : <strong>présent d'énonciation</strong>.",
-    "« Je suis dans l'escalier » = le personnage parle de ce qui se passe au moment précis où il parle. C'est le présent d'énonciation, ancré dans l'instant.");
+  corr('kA3',okA3t&&okA3v,"Temps : <strong>présent de l'indicatif</strong>. Valeur : <strong>présent d'énonciation</strong>.","Le personnage parle de ce qui se passe au moment où il parle.");
 
-  // A4
   const okA4=eq(gch('cA4'),'Présent de narration');
   mch('cA4',okA4,'Présent de narration');
   if(okA4)a++;
-  corr('kA4',okA4,
-    "Réponse : <strong>Présent de narration</strong> (ou présent historique).",
-    "L'événement est passé (1969) mais le présent est utilisé pour le rendre plus vivant, plus immédiat. On l'appelle aussi présent historique.");
+  corr('kA4',okA4,"Réponse : <strong>Présent de narration</strong> (ou présent historique).","L'événement est passé mais le présent est utilisé pour le rendre plus vivant.");
 
-  // A5
   const okA5=eq(gch('cA5'),'Présent de vérité générale');
   mch('cA5',okA5,'Présent de vérité générale');
   if(okA5)a++;
-  corr('kA5',okA5,
-    "Réponse : <strong>Présent de vérité générale</strong>.",
-    "« L'eau bout à 100 °C » est une vérité scientifique vraie en tout temps et en tout lieu. On emploie le présent pour exprimer cette permanence.");
+  corr('kA5',okA5,"Réponse : <strong>Présent de vérité générale</strong>.","« L'eau bout à 100 °C » exprime une vérité scientifique.");
 
-  // A6 — production libre
   const vA6=document.getElementById('A6').value;
   const okA6=vA6.trim().length>15 && (has(vA6,'était','brillait','luisait','dormait','sentait','paraissait'));
   mi('A6',okA6);if(okA6)a++;
-  corr('kA6',okA6,
-    "Exemple attendu : <strong>« La maison était silencieuse, les rideaux flottaient doucement. »</strong>",
-    "L'imparfait descriptif peint un décor, un état : il ne raconte pas une action précise mais dessine l'arrière-plan du récit. Il faut un verbe d'état ou descriptif à l'imparfait.");
+  corr('kA6',okA6,"Exemple attendu : <strong>« La maison était silencieuse, les rideaux flottaient doucement. »</strong>","L'imparfait descriptif peint un décor ou un état.");
 
-  // A7 tableau
   const okA7a=has(document.getElementById('A7a').value,"imparfait d'habitude",'habitude');
   const okA7b=has(document.getElementById('A7b').value,'simultaneite','simultaneité','simultane');
   const okA7c=has(document.getElementById('A7c').value,'narration','historique');
   mi('A7a',okA7a);mi('A7b',okA7b);mi('A7c',okA7c);
   if(okA7a)a++;if(okA7b)a++;if(okA7c)a++;
-  corr('kA7',okA7a&&okA7b&&okA7c,
-    `<table style="font-size:.82rem;border-collapse:collapse;width:100%">
-      <tr><td style="padding:4px 8px;color:#C44B24"><em>« Chaque année… »</em></td><td style="padding:4px 8px"><strong>Imparfait d'habitude</strong> — action répétée dans le passé</td></tr>
-      <tr><td style="padding:4px 8px;color:#C44B24"><em>« Il lisait quand… »</em></td><td style="padding:4px 8px"><strong>Imparfait de simultanéité</strong> — action interrompue par le passé simple</td></tr>
-      <tr><td style="padding:4px 8px;color:#C44B24"><em>« Napoléon perd… »</em></td><td style="padding:4px 8px"><strong>Présent de narration</strong> — passé rendu vivant par le présent</td></tr>
+  corr('kA7',okA7a&&okA7b&&okA7c,`<table style="font-size:.82rem;border-collapse:collapse;width:100%">
+      <tr><td style="padding:4px 8px"><em>« Chaque année… »</em></td><td style="padding:4px 8px"><strong>Imparfait d'habitude</strong></td></tr>
+      <tr><td style="padding:4px 8px"><em>« Il lisait quand… »</em></td><td style="padding:4px 8px"><strong>Imparfait de simultanéité</strong></td></tr>
+      <tr><td style="padding:4px 8px"><em>« Napoléon perd… »</em></td><td style="padding:4px 8px"><strong>Présent de narration</strong></td></tr>
     </table>`,'');
 
   pts+=a;det.push({l:'Partie A — Présent & imparfait',s:a,m:11});
 
-  /* ══ PARTIE B ══ */
   let b=0;
-
-  // B1
   const okB1n=has(document.getElementById('B1n').value,'2','deux');
   const okB1t=has(document.getElementById('B1t').value,'complex');
   mi('B1n',okB1n);mi('B1t',okB1t);
   if(okB1n)b++;if(okB1t)b++;
-  corr('kB1',okB1n&&okB1t,
-    "<strong>2 verbes conjugués</strong> (ai croisé · portait) → phrase <strong>complexe</strong>.",
-    "Une phrase est complexe dès qu'elle contient au moins 2 verbes conjugués appartenant à des propositions différentes.");
+  corr('kB1',okB1n&&okB1t,"<strong>2 verbes conjugués</strong> → phrase <strong>complexe</strong>.","Une phrase complexe contient au moins 2 verbes conjugués.");
 
-  // B2a
-  const okB2aps=has(document.getElementById('B2a-ps').value,'dont tu m','dont tu m as parle','dont tu m as parlé','dont','tu m as parle');
+  const okB2aps=has(document.getElementById('B2a-ps').value,'dont tu m','dont');
   const okB2at=has(document.getElementById('B2a-t').value,'relative');
   mi('B2a-ps',okB2aps);mi('B2a-t',okB2at);
   if(okB2aps)b++;if(okB2at)b++;
-  corr('kB2a',okB2aps&&okB2at,
-    "Subordonnée : <strong>« dont tu m'as parlé »</strong> — Type : <strong>relative</strong>.",
-    "Introduite par le pronom relatif « dont », elle complète le nom « livre » (l'antécédent).");
+  corr('kB2a',okB2aps&&okB2at,"Subordonnée : <strong>« dont tu m'as parlé »</strong> — Type : <strong>relative</strong>.","Introduite par le pronom relatif « dont ».");
 
-  // B2b
   const okB2bps=has(document.getElementById('B2b-ps').value,'que tu as oublie','que tu as oublié','tu as oublie');
   const okB2bt=has(document.getElementById('B2b-t').value,'completive','complétive','cod');
   mi('B2b-ps',okB2bps);mi('B2b-t',okB2bt);
   if(okB2bps)b++;if(okB2bt)b++;
-  corr('kB2b',okB2bps&&okB2bt,
-    "Subordonnée : <strong>« que tu as oublié ton stylo »</strong> — Type : <strong>complétive (COD)</strong>.",
-    "Introduite par la conjonction « que », elle répond à « Je crois quoi ? » → COD du verbe crois.");
+  corr('kB2b',okB2bps&&okB2bt,"Subordonnée : <strong>« que tu as oublié ton stylo »</strong> — Type : <strong>complétive (COD)</strong>.","Elle répond à « Je crois quoi ? ».");
 
-  // B3 tableau
   const okB3at=has(document.getElementById('B3a-t').value,'circonstancielle','subordonnee','subordonn');
   const okB3av=has(document.getElementById('B3a-v').value,'cause');
   const okB3bt=has(document.getElementById('B3b-t').value,'circonstancielle','subordonnee');
@@ -918,32 +804,24 @@ function valider(){
   const okB3cv=has(document.getElementById('B3c-v').value,'condition');
   const okB3dt=has(document.getElementById('B3d-t').value,'circonstancielle','subordonnee');
   const okB3dv=has(document.getElementById('B3d-v').value,'temps');
-  [['B3a-t',okB3at],['B3a-v',okB3av],['B3b-t',okB3bt],['B3b-v',okB3bv],
-   ['B3c-t',okB3ct],['B3c-v',okB3cv],['B3d-t',okB3dt],['B3d-v',okB3dv]].forEach(([id,ok])=>mi(id,ok));
+  [['B3a-t',okB3at],['B3a-v',okB3av],['B3b-t',okB3bt],['B3b-v',okB3bv],['B3c-t',okB3ct],['B3c-v',okB3cv],['B3d-t',okB3dt],['B3d-v',okB3dv]].forEach(([id,ok])=>mi(id,ok));
   const b3pts=[okB3av,okB3bv,okB3cv,okB3dv].filter(Boolean).length;
   b+=b3pts;
-  corr('kB3',b3pts===4,
-    `<table style="font-size:.82rem;border-collapse:collapse;width:100%">
-      <tr><td style="padding:4px 8px;color:#117A5E"><em>parce qu'il avait…</em></td><td style="padding:4px 8px">Circ. de <strong>cause</strong> — parce que</td></tr>
-      <tr><td style="padding:4px 8px;color:#117A5E"><em>pour que tu entendes</em></td><td style="padding:4px 8px">Circ. de <strong>but</strong> — pour que</td></tr>
-      <tr><td style="padding:4px 8px;color:#117A5E"><em>Si tu travailles</em></td><td style="padding:4px 8px">Circ. de <strong>condition</strong> — si</td></tr>
-      <tr><td style="padding:4px 8px;color:#117A5E"><em>lorsqu'elle entra</em></td><td style="padding:4px 8px">Circ. de <strong>temps</strong> — lorsque</td></tr>
+  corr('kB3',b3pts===4,`<table style="font-size:.82rem;border-collapse:collapse;width:100%">
+      <tr><td style="padding:4px 8px"><em>parce qu'il avait…</em></td><td style="padding:4px 8px">Cause</td></tr>
+      <tr><td style="padding:4px 8px"><em>pour que tu entendes</em></td><td style="padding:4px 8px">But</td></tr>
+      <tr><td style="padding:4px 8px"><em>Si tu travailles</em></td><td style="padding:4px 8px">Condition</td></tr>
+      <tr><td style="padding:4px 8px"><em>lorsqu'elle entra</em></td><td style="padding:4px 8px">Temps</td></tr>
     </table>`,'');
 
-  // B4
   const vB4=document.getElementById('B4').value;
   const okB4=has(vB4,'cela') && (has(vB4,'cod','objet direct','completive','complétive') || has(vB4,'fonctionne','marche','correct'));
   mi('B4',okB4);if(okB4)b++;
-  corr('kB4',okB4,
-    "Phrase transformée : <strong>« Il espère cela. »</strong> La phrase reste correcte → c'est bien une <strong>complétive COD</strong>.",
-    "Le test de substitution par « cela » prouve qu'une proposition est complétive COD : si on peut la remplacer par « cela » sans casser la phrase, elle joue le rôle de COD du verbe principal.");
+  corr('kB4',okB4,"Phrase transformée : <strong>« Il espère cela. »</strong>","Cela montre qu'il s'agit d'une complétive COD.");
 
   pts+=b;det.push({l:'Partie B — Propositions subordonnées',s:b,m:10});
 
-  /* ══ PARTIE C ══ */
   let c=0;
-
-  // C1
   const okC1ac=has(document.getElementById('C1a-c').value,'cod');
   const okC1aq=has(document.getElementById('C1a-q').value,'quoi','ecoute quoi');
   const okC1bc=has(document.getElementById('C1b-c').value,'coi','non cod');
@@ -952,19 +830,11 @@ function valider(){
   const okC1cq=has(document.getElementById('C1c-q').value,'quoi','regarde quoi');
   const okC1dc=has(document.getElementById('C1d-c').value,'coi','non cod');
   const okC1dq=has(document.getElementById('C1d-q').value,'de','souvient de');
-  [['C1a-c',okC1ac],['C1a-q',okC1aq],['C1b-c',okC1bc],['C1b-q',okC1bq],
-   ['C1c-c',okC1cc],['C1c-q',okC1cq],['C1d-c',okC1dc],['C1d-q',okC1dq]].forEach(([id,ok])=>mi(id,ok));
+  [['C1a-c',okC1ac],['C1a-q',okC1aq],['C1b-c',okC1bc],['C1b-q',okC1bq],['C1c-c',okC1cc],['C1c-q',okC1cq],['C1d-c',okC1dc],['C1d-q',okC1dq]].forEach(([id,ok])=>mi(id,ok));
   const c1pts=[okC1ac,okC1bc,okC1cc,okC1dc].filter(Boolean).length;
   c+=c1pts;
-  corr('kC1',c1pts===4,
-    `<table style="font-size:.82rem;border-collapse:collapse;width:100%">
-      <tr><td style="padding:4px 8px;color:#C44B24"><em>de la musique</em></td><td style="padding:4px 8px"><strong>COD</strong> — écoute <em>quoi</em> ? (sans préposition)</td></tr>
-      <tr><td style="padding:4px 8px;color:#C44B24"><em>à son professeur</em></td><td style="padding:4px 8px"><strong>COI</strong> — parle <em>à</em> (préposition → pas COD)</td></tr>
-      <tr><td style="padding:4px 8px;color:#C44B24"><em>ce film</em></td><td style="padding:4px 8px"><strong>COD</strong> — regardons <em>quoi</em> ? (sans préposition)</td></tr>
-      <tr><td style="padding:4px 8px;color:#C44B24"><em>de cette journée</em></td><td style="padding:4px 8px"><strong>COI</strong> — se souvient <em>de</em> (préposition → pas COD)</td></tr>
-    </table>`,'');
+  corr('kC1',c1pts===4,"Réponses attendues : musique = COD ; à son professeur = COI ; ce film = COD ; de cette journée = COI.","Le COD se repère sans préposition.");
 
-  // C2
   const okC2ap=has(document.getElementById('C2a-p').value,'parties');
   const okC2aa=has(document.getElementById('C2a-a').value,'etre','être');
   const okC2bp=has(document.getElementById('C2b-p').value,'ecrite','écrite');
@@ -973,69 +843,44 @@ function valider(){
   const okC2ca=has(document.getElementById('C2c-a').value,'avoir');
   const okC2dp=has(document.getElementById('C2d-p').value,'lus');
   const okC2da=has(document.getElementById('C2d-a').value,'avoir');
-  [['C2a-p',okC2ap],['C2a-a',okC2aa],['C2b-p',okC2bp],['C2b-a',okC2ba],
-   ['C2c-p',okC2cp],['C2c-a',okC2ca],['C2d-p',okC2dp],['C2d-a',okC2da]].forEach(([id,ok])=>mi(id,ok));
+  [['C2a-p',okC2ap],['C2a-a',okC2aa],['C2b-p',okC2bp],['C2b-a',okC2ba],['C2c-p',okC2cp],['C2c-a',okC2ca],['C2d-p',okC2dp],['C2d-a',okC2da]].forEach(([id,ok])=>mi(id,ok));
   const c2pts=[okC2ap,okC2bp,okC2cp,okC2dp].filter(Boolean).length;
   c+=c2pts;
-  corr('kC2',c2pts===4,
-    `<table style="font-size:.82rem;border-collapse:collapse;width:100%">
-      <tr><td style="padding:4px 8px;color:#C44B24">parties</td><td style="padding:4px 8px">être + sujet fém. plur. → <strong>parties</strong></td></tr>
-      <tr><td style="padding:4px 8px;color:#C44B24">écrite</td><td style="padding:4px 8px">avoir + COD « la lettre » fém. sing. avant → <strong>écrite</strong></td></tr>
-      <tr><td style="padding:4px 8px;color:#C44B24">mangé</td><td style="padding:4px 8px">avoir + COD « une pomme » après → pas d'accord → <strong>mangé</strong></td></tr>
-      <tr><td style="padding:4px 8px;color:#C44B24">lus</td><td style="padding:4px 8px">avoir + COD « les romans » masc. plur. avant → <strong>lus</strong></td></tr>
-    </table>`,'');
+  corr('kC2',c2pts===4,"Réponses attendues : parties / écrite / mangé / lus.","Vérifie l'auxiliaire et la place du COD.");
 
-  // C3
   const vC3=document.getElementById('C3').value;
-  const okC3=has(vC3,'cod') && has(vC3,'avant','place') && (has(vC3,'accord','genre','nombre'));
+  const okC3=has(vC3,'cod') && has(vC3,'avant','place') && has(vC3,'accord','genre','nombre');
   mi('C3',okC3);if(okC3)c+=2;
-  corr('kC3',okC3,
-    "<strong>Étape 1 :</strong> Y a-t-il un COD dans la phrase ? <strong>Étape 2 :</strong> Ce COD est-il placé <em>avant</em> le verbe ? <strong>Étape 3 :</strong> Si oui → accorde le participe en genre et en nombre avec ce COD.",
-    "Cette démarche s'applique uniquement avec l'auxiliaire <em>avoir</em>. Avec <em>être</em>, le participe s'accorde toujours avec le sujet.");
+  corr('kC3',okC3,"Étape 1 : repérer le COD. Étape 2 : voir s'il est placé avant. Étape 3 : si oui, accorder le participe.","Cette démarche s'applique avec l'auxiliaire avoir.");
 
-  // C4
   const okC4ch=eq(gch('cC4'),'b) Les clés qu\'il a perdu sont introuvables.');
   mch('cC4',okC4ch,"b) Les clés qu'il a perdu sont introuvables.");
   const okC4corr=has(document.getElementById('C4-corr').value,'perdues');
   mi('C4-corr',okC4corr);
   if(okC4ch)c++;if(okC4corr)c++;
-  corr('kC4',okC4ch&&okC4corr,
-    "Erreur : phrase b). Correction : <strong>« Les clés qu'il a perdues sont introuvables. »</strong>",
-    "« Les clés » est le COD placé avant le verbe « a perdu » → il faut accorder : perdues (féminin pluriel). « perdu » sans accord est incorrect ici.");
+  corr('kC4',okC4ch&&okC4corr,"Correction : <strong>« Les clés qu'il a perdues sont introuvables. »</strong>","Le COD « les clés » est placé avant.");
 
   pts+=c;det.push({l:'Partie C — COD & participe passé',s:c,m:11});
 
-  /* ══ PARTIE D ══ */
   let d=0;
-
-  // D1 tableau
   const D1=[
     ['D1a-t','temps','D1a-m','verbe'],
     ['D1b-t','quantite','D1b-m','adjectif'],
     ['D1c-t','lieu','D1c-m','verbe'],
     ['D1d-t','maniere','D1d-m','verbe'],
-    ['D1e-t','doute','D1e-m','verbe','phrase'],
+    ['D1e-t','doute','D1e-m','phrase'],
     ['D1f-t','negation','D1f-m','verbe'],
   ];
   let d1pts=0;
   D1.forEach(([tid,tk,mid,mk])=>{
     const ot=has(document.getElementById(tid).value,tk);
-    const om=has(document.getElementById(mid).value,mk);
+    const om=has(document.getElementById(mid).value,mk,'verbe','adjectif');
     mi(tid,ot);mi(mid,om);
     if(ot)d1pts++;
   });
   d+=d1pts;
-  corr('kD1',d1pts===6,
-    `<table style="font-size:.82rem;border-collapse:collapse;width:100%">
-      <tr><td style="padding:4px 8px;color:#2264AC">toujours</td><td>Temps</td><td>modifie le verbe</td></tr>
-      <tr><td style="padding:4px 8px;color:#2264AC">très</td><td>Quantité</td><td>modifie l'adjectif</td></tr>
-      <tr><td style="padding:4px 8px;color:#2264AC">ici</td><td>Lieu</td><td>modifie le verbe</td></tr>
-      <tr><td style="padding:4px 8px;color:#2264AC">calmement</td><td>Manière</td><td>modifie le verbe</td></tr>
-      <tr><td style="padding:4px 8px;color:#2264AC">peut-être</td><td>Doute</td><td>modifie la phrase entière</td></tr>
-      <tr><td style="padding:4px 8px;color:#2264AC">jamais</td><td>Négation</td><td>modifie le verbe</td></tr>
-    </table>`,'');
+  corr('kD1',d1pts===6,"toujours = temps ; très = quantité ; ici = lieu ; calmement = manière ; peut-être = doute ; jamais = négation.","Les adverbes peuvent modifier un verbe, un adjectif ou la phrase.");
 
-  // D2
   const D2r=[
     ['D2a-f','douce','D2a-adv','doucement'],
     ['D2b-f','lente','D2b-adv','lentement'],
@@ -1050,22 +895,15 @@ function valider(){
     if(of&&oa)d2pts++;
   });
   d+=d2pts;
-  corr('kD2',d2pts===4,
-    `Règle : <strong>adjectif au féminin + -ment</strong><br>
-    doux → <strong>douce</strong> → <strong>doucement</strong> · lent → <strong>lente</strong> → <strong>lentement</strong> · heureux → <strong>heureuse</strong> → <strong>heureusement</strong> · vif → <strong>vive</strong> → <strong>vivement</strong>`,
-    '');
+  corr('kD2',d2pts===4,"Règle : adjectif au féminin + -ment.","douce → doucement ; lente → lentement ; heureuse → heureusement ; vive → vivement.");
 
-  // D3
   const vD3=document.getElementById('D3').value;
   const okD3=has(vD3,'invariable','jamais','accord') && has(vD3,'lentement','correction','correct');
   mi('D3',okD3);if(okD3)d+=2;
-  corr('kD3',okD3,
-    "Correction : <strong>« Elles parlent <em>lentement</em> pour être bien comprises. »</strong>",
-    "Les adverbes sont des mots <em>invariables</em> : ils ne prennent jamais de marque de pluriel (-s), de féminin (-e) ni aucune autre terminaison. « Lentements » est donc impossible.");
+  corr('kD3',okD3,"Correction : <strong>« Elles parlent lentement pour être bien comprises. »</strong>","Les adverbes sont invariables.");
 
   pts+=d;det.push({l:'Partie D — Les adverbes',s:d,m:8});
 
-  /* ── RÉSULTATS FINAUX ── */
   const pct=pts/40;
   const mention=pct>=.88?'🏆 Excellent — Bravo !':pct>=.70?'👍 Bien — Bon travail !':pct>=.50?'📚 Assez bien — Continue !':'💪 En cours — Revois la fiche !';
   document.getElementById('res-score').textContent=pts+' / 40';
@@ -1076,9 +914,64 @@ function valider(){
     const ic=s===m?'✅':s>0?'⚠️':'❌';
     grid.innerHTML+=`<div class="rr ${cls}"><span>${ic}</span><span>${l}</span><span class="rr-pts">${s}/${m}</span></div>`;
   });
+
   document.getElementById('panel-res').style.display='block';
   document.getElementById('panel-res').scrollIntoView({behavior:'smooth',block:'start'});
+
+  const scoreFieldId = 'score_final';
+  let scoreField = document.getElementById(scoreFieldId);
+  if (!scoreField) {
+    scoreField = document.createElement('input');
+    scoreField.type = 'hidden';
+    scoreField.name = 'score_final';
+    scoreField.id = scoreFieldId;
+    document.getElementById('eval-form').appendChild(scoreField);
+  }
+  scoreField.value = pts + ' / 40';
+
+  const mentionFieldId = 'mention_finale';
+  let mentionField = document.getElementById(mentionFieldId);
+  if (!mentionField) {
+    mentionField = document.createElement('input');
+    mentionField.type = 'hidden';
+    mentionField.name = 'mention_finale';
+    mentionField.id = mentionFieldId;
+    document.getElementById('eval-form').appendChild(mentionField);
+  }
+  mentionField.value = mention;
 }
+
+async function envoyerFormulaire(event){
+  event.preventDefault();
+
+  valider();
+
+  const form = document.getElementById('eval-form');
+  const msg = document.getElementById('submit-msg');
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      msg.className = 'msg ok';
+      msg.textContent = 'Réponses envoyées avec succès.';
+    } else {
+      msg.className = 'msg ko';
+      msg.textContent = "La correction s'est affichée, mais l'envoi à Formspree a échoué.";
+    }
+  } catch (e) {
+    msg.className = 'msg ko';
+    msg.textContent = "Erreur réseau : la correction s'est affichée, mais l'envoi n'a pas abouti.";
+  }
+}
+
+document.getElementById('eval-form').addEventListener('submit', envoyerFormulaire);
+prog();
 </script>
 </body>
 </html>
