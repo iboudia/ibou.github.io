@@ -298,7 +298,7 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
 <div class="wrap">
 
 <!-- ═══ HEADER ═══ -->
- <form id="eval-form" action="https://formspree.io/f/mreoerwn">
+ <form id="eval-form" action="https://formspree.io/f/mreoerwn" method="POST">
   
  </form>
   <div class="hdr">
@@ -311,15 +311,15 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
     <div class="identity">
       <div class="id-f">
         <span class="id-label">Nom</span>
-        <input type="text" id="f-nom" placeholder="…"/>
+        <input name="f-nom" type="text" id="f-nom" placeholder="…"/>
       </div>
       <div class="id-f">
         <span class="id-label">Prénom</span>
-        <input type="text" id="f-prenom" placeholder="…"/>
+        <input type="f-prenom" id="f-prenom" placeholder="…"/>
       </div>
       <div class="id-f">
         <span class="id-label">Classe</span>
-        <input type="text" id="f-classe" placeholder="…"/>
+        <input name="f-classe" type="text" id="f-classe" placeholder="…"/>
       </div>
     </div>
   </div>
@@ -383,8 +383,8 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
           <div class="consigne"><span class="consigne-tag">Consigne</span><span>Dans la phrase (3), quel est le <strong>temps</strong> du verbe <em>« suis »</em> et quelle est sa <strong>valeur</strong> précise ?</span></div>
         </div>
         <div class="dual">
-          <input class="inp" type="text" id="A3t" placeholder="Temps : …" oninput="prog()"/>
-          <input class="inp" type="text" id="A3v" placeholder="Valeur : …" oninput="prog()"/>
+          <input name="tense" class="inp" type="text" id="A3t" placeholder="Temps : …" oninput="prog()"/>
+          <input name="verbValue" class="inp" type="text" id="A3v" placeholder="Valeur : …" oninput="prog()"/>
         </div>
         <div class="corr" id="kA3"></div>
       </div>
@@ -438,9 +438,9 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
         <table class="atab">
           <thead><tr><th>Phrase</th><th>Valeur du temps</th></tr></thead>
           <tbody>
-            <tr><td>« Chaque année, il partait en vacances. »</td><td><input class="inp" type="text" id="A7a" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>« Il lisait quand la lumière s'éteignit. »</td><td><input class="inp" type="text" id="A7b" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>« En 1815, Napoléon perd à Waterloo. »</td><td><input class="inp" type="text" id="A7c" placeholder="…" oninput="prog()"/></td></tr>
+            <tr><td>« Chaque année, il partait en vacances. »</td><td><input name="A7a" class="inp" type="text" id="A7a" placeholder="…" oninput="prog()"/></td></tr>
+            <tr><td>« Il lisait quand la lumière s'éteignit. »</td><td><input name="A7b" class="inp" type="text" id="A7b" placeholder="…" oninput="prog()"/></td></tr>
+            <tr><td>« En 1815, Napoléon perd à Waterloo. »</td><td><input name="A7c" class="inp" type="text" id="A7c" placeholder="…" oninput="prog()"/></td></tr>
           </tbody>
         </table>
         <div class="corr" id="kA7"></div>
@@ -473,8 +473,8 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
         </div>
         <div class="ref">Le garçon que j'ai croisé ce matin portait un sac rouge.</div>
         <div class="dual">
-          <input class="inp" type="text" id="B1n" placeholder="Nombre de verbes : …" oninput="prog()"/>
-          <input class="inp" type="text" id="B1t" placeholder="Simple ou complexe ? …" oninput="prog()"/>
+          <input name="B1n" class="inp" type="text" id="B1n" placeholder="Nombre de verbes : …" oninput="prog()"/>
+          <input name="B1t" class="inp" type="text" id="B1t" placeholder="Simple ou complexe ? …" oninput="prog()"/>
         </div>
         <div class="corr" id="kB1"></div>
       </div>
@@ -487,14 +487,14 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
         </div>
         <div class="ref">a) Le livre dont tu m'as parlé est épuisé.</div>
         <div class="dual" style="margin-bottom:8px;">
-          <input class="inp" type="text" id="B2a-ps" placeholder="Subordonnée : …" oninput="prog()"/>
-          <input class="inp" type="text" id="B2a-t" placeholder="Type : …" oninput="prog()"/>
+          <input name="B2a-ps" class="inp" type="text" id="B2a-ps" placeholder="Subordonnée : …" oninput="prog()"/>
+          <input name="B2a-t" class="inp" type="text" id="B2a-t" placeholder="Type : …" oninput="prog()"/>
         </div>
         <div class="corr" id="kB2a"></div>
         <div class="ref" style="margin-top:10px;">b) Je crois que tu as oublié ton stylo.</div>
         <div class="dual">
-          <input class="inp" type="text" id="B2b-ps" placeholder="Subordonnée : …" oninput="prog()"/>
-          <input class="inp" type="text" id="B2b-t" placeholder="Type : …" oninput="prog()"/>
+          <input name="B2b-ps" class="inp" type="text" id="B2b-ps" placeholder="Subordonnée : …" oninput="prog()"/>
+          <input name="B2b-t" class="inp" type="text" id="B2b-t" placeholder="Type : …" oninput="prog()"/>
         </div>
         <div class="corr" id="kB2b"></div>
       </div>
@@ -510,23 +510,23 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
           <tbody>
             <tr>
               <td>« Il a révisé parce qu'il avait un examen. »</td>
-              <td><input class="inp" type="text" id="B3a-t" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="B3a-v" placeholder="…" oninput="prog()"/></td>
+              <td><input name="B3a-t" class="inp" type="text" id="B3a-t" placeholder="…" oninput="prog()"/></td>
+              <td><input name="B3a-v" class="inp" type="text" id="B3a-v" placeholder="…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>« Elle parle doucement pour que tu entendes. »</td>
-              <td><input class="inp" type="text" id="B3b-t" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="B3b-v" placeholder="…" oninput="prog()"/></td>
+              <td><input name="B3b-t" class="inp" type="text" id="B3b-t" placeholder="…" oninput="prog()"/></td>
+              <td><input name="B3b-v" class="inp" type="text" id="B3b-v" placeholder="…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>« Si tu travailles, tu réussiras. »</td>
-              <td><input class="inp" type="text" id="B3c-t" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="B3c-v" placeholder="…" oninput="prog()"/></td>
+              <td><input name="B3c-t" class="inp" type="text" id="B3c-t" placeholder="…" oninput="prog()"/></td>
+              <td><input name="B3c-v" class="inp" type="text" id="B3c-v" placeholder="…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>« Il sourit lorsqu'elle entra dans la salle. »</td>
-              <td><input class="inp" type="text" id="B3d-t" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="B3d-v" placeholder="…" oninput="prog()"/></td>
+              <td><input name="B3d-t" class="inp" type="text" id="B3d-t" placeholder="…" oninput="prog()"/></td>
+              <td><input name="B3d-v" class="inp" type="text" id="B3d-v" placeholder="…" oninput="prog()"/></td>
             </tr>
           </tbody>
         </table>
@@ -574,23 +574,23 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
           <tbody>
             <tr>
               <td>« Elle écoute <u>de la musique</u>. »</td>
-              <td><input class="inp" type="text" id="C1a-c" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="C1a-q" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C1a-c" class="inp" type="text" id="C1a-c" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C1a-q" class="inp" type="text" id="C1a-q" placeholder="…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>« Il parle <u>à son professeur</u>. »</td>
-              <td><input class="inp" type="text" id="C1b-c" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="C1b-q" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C1b-c" class="inp" type="text" id="C1b-c" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C1b-q" class="inp" type="text" id="C1b-q" placeholder="…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>« Nous regardons <u>ce film</u>. »</td>
-              <td><input class="inp" type="text" id="C1c-c" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="C1c-q" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C1c-c" class="inp" type="text" id="C1c-c" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C1c-q" class="inp" type="text" id="C1c-q" placeholder="…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>« Elle se souvient <u>de cette journée</u>. »</td>
-              <td><input class="inp" type="text" id="C1d-c" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="C1d-q" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C1d-c" class="inp" type="text" id="C1d-c" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C1d-q" class="inp" type="text" id="C1d-q" placeholder="…" oninput="prog()"/></td>
             </tr>
           </tbody>
         </table>
@@ -608,23 +608,23 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
           <tbody>
             <tr>
               <td>« Les filles sont (partir). »</td>
-              <td><input class="inp" type="text" id="C2a-p" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="C2a-a" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C2a-p" class="inp" type="text" id="C2a-p" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C2a-a" class="inp" type="text" id="C2a-a" placeholder="…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>« La lettre qu'il a (écrire). »</td>
-              <td><input class="inp" type="text" id="C2b-p" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="C2b-a" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C2b-p" class="inp" type="text" id="C2b-p" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C2b-a" class="inp" type="text" id="C2b-a" placeholder="…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>« Il a (manger) une pomme. »</td>
-              <td><input class="inp" type="text" id="C2c-p" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="C2c-a" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C2c-p" class="inp" type="text" id="C2c-p" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C2c-a" class="inp" type="text" id="C2c-a" placeholder="…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>« Les romans que j'ai (lire). »</td>
-              <td><input class="inp" type="text" id="C2d-p" placeholder="…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="C2d-a" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C2d-p" class="inp" type="text" id="C2d-p" placeholder="…" oninput="prog()"/></td>
+              <td><input name="C2d-a" class="inp" type="text" id="C2d-a" placeholder="…" oninput="prog()"/></td>
             </tr>
           </tbody>
         </table>
@@ -652,7 +652,7 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
           <div class="ch" onclick="pick(this,'cC4')">b) Les clés qu'il a perdu sont introuvables.</div>
           <div class="ch" onclick="pick(this,'cC4')">c) Nous avons mangé une pizza.</div>
         </div>
-        <input class="inp" type="text" id="C4-corr" placeholder="Correction de la phrase erronée…" oninput="prog()" style="margin-top:8px;"/>
+        <input name="C4-corr" class="inp" type="text" id="C4-corr" placeholder="Correction de la phrase erronée…" oninput="prog()" style="margin-top:8px;"/>
         <div class="corr" id="kC4"></div>
       </div>
 
@@ -692,12 +692,12 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
         <table class="atab">
           <thead><tr><th>Adverbe</th><th>Type</th><th>Ce qu'il modifie</th></tr></thead>
           <tbody>
-            <tr><td>toujours</td><td><input class="inp" type="text" id="D1a-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1a-m" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>très</td>    <td><input class="inp" type="text" id="D1b-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1b-m" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>ici</td>     <td><input class="inp" type="text" id="D1c-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1c-m" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>calmement</td><td><input class="inp" type="text" id="D1d-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1d-m" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>peut-être</td><td><input class="inp" type="text" id="D1e-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1e-m" placeholder="…" oninput="prog()"/></td></tr>
-            <tr><td>jamais</td>  <td><input class="inp" type="text" id="D1f-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1f-m" placeholder="…" oninput="prog()"/></td></tr>
+            <tr><td>toujours</td><td><input name="D1a-t" class="inp" type="text" id="D1a-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1a-m" placeholder="…" oninput="prog()"/></td></tr>
+            <tr><td>très</td>    <td><input name="D1b-t" class="inp" type="text" id="D1b-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1b-m" placeholder="…" oninput="prog()"/></td></tr>
+            <tr><td>ici</td>     <td><input name="D1c-t" class="inp" type="text" id="D1c-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1c-m" placeholder="…" oninput="prog()"/></td></tr>
+            <tr><td>calmement</td><td><input name="D1d-t" class="inp" type="text" id="D1d-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1d-m" placeholder="…" oninput="prog()"/></td></tr>
+            <tr><td>peut-être</td><td><input name="D1e-t" class="inp" type="text" id="D1e-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1e-m" placeholder="…" oninput="prog()"/></td></tr>
+            <tr><td>jamais</td>  <td><input name="D1f-t" class="inp" type="text" id="D1f-t" placeholder="…" oninput="prog()"/></td><td><input class="inp" type="text" id="D1f-m" placeholder="…" oninput="prog()"/></td></tr>
           </tbody>
         </table>
         <div class="corr" id="kD1"></div>
@@ -714,23 +714,23 @@ footer{text-align:center;margin-top:48px;font-size:.7rem;color:var(--muted);lett
           <tbody>
             <tr>
               <td>doux</td>
-              <td><input class="inp" type="text" id="D2a-f" placeholder="féminin…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="D2a-adv" placeholder="adverbe…" oninput="prog()"/></td>
+              <td><input name="D2a-f" class="inp" type="text" id="D2a-f" placeholder="féminin…" oninput="prog()"/></td>
+              <td><input name="D2a-adv" class="inp" type="text" id="D2a-adv" placeholder="adverbe…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>lent</td>
-              <td><input class="inp" type="text" id="D2b-f" placeholder="féminin…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="D2b-adv" placeholder="adverbe…" oninput="prog()"/></td>
+              <td><input name="D2b-f" class="inp" type="text" id="D2b-f" placeholder="féminin…" oninput="prog()"/></td>
+              <td><input name="D2b-adv" class="inp" type="text" id="D2b-adv" placeholder="adverbe…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>heureux</td>
-              <td><input class="inp" type="text" id="D2c-f" placeholder="féminin…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="D2c-adv" placeholder="adverbe…" oninput="prog()"/></td>
+              <td><input name="D2c-f" class="inp" type="text" id="D2c-f" placeholder="féminin…" oninput="prog()"/></td>
+              <td><input name="D2c-adv" class="inp" type="text" id="D2c-adv" placeholder="adverbe…" oninput="prog()"/></td>
             </tr>
             <tr>
               <td>vif</td>
-              <td><input class="inp" type="text" id="D2d-f" placeholder="féminin…" oninput="prog()"/></td>
-              <td><input class="inp" type="text" id="D2d-adv" placeholder="adverbe…" oninput="prog()"/></td>
+              <td><input name="D2d-f" class="inp" type="text" id="D2d-f" placeholder="féminin…" oninput="prog()"/></td>
+              <td><input name="D2d-adv" class="inp" type="text" id="D2d-adv" placeholder="adverbe…" oninput="prog()"/></td>
             </tr>
           </tbody>
         </table>
